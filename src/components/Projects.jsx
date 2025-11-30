@@ -10,20 +10,19 @@ const Projects = () => {
                     {/* Project 1 */}
                     <RevealOnScroll>
                         <div className="project-card">
-                            <h3>E-Commerce Platform</h3>
+                            <h3>MoonBay Hotel Booking</h3>
                             <p>
-                                A full-stack online store built with React and Node.js.
-                                Features include user authentication, product search, shopping cart, and payment integration.
+                                A comprehensive hotel management and booking platform built as a final group project.
+                                I was responsible for the core booking engine, authentication (Login/Register), and the administrative dashboard for hotel staff. Key features include online reservations and a detailed review system.
                             </p>
                             <div className="tech-stack">
                                 <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                                <span>Express</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>Blade</span>
                             </div>
                             <div className="project-links">
-                                <a href="#" className="btn secondary">View Code</a>
-                                <a href="#" className="btn primary">Live Demo</a>
+                                <a href="https://github.com/dohung95/MoonBay" className="btn secondary">View Code</a>
                             </div>
                         </div>
                     </RevealOnScroll>
@@ -31,20 +30,21 @@ const Projects = () => {
                     {/* Project 2 */}
                     <RevealOnScroll>
                         <div className="project-card">
-                            <h3>Employee Management System</h3>
+                            <h3>Online Health Consultation Portal</h3>
                             <p>
-                                A comprehensive dashboard for HR management.
-                                Allows CRUD operations for employee records, attendance tracking, and payroll processing.
+                                A telemedicine platform facilitating remote healthcare services.
+                                I engineered the secure authentication system, real-time 1-on-1 video calls, and patient-doctor messaging. I also integrated an AI-powered chatbot to assist with preliminary health queries.
                             </p>
                             <div className="tech-stack">
                                 <span>React</span>
-                                <span>Spring Boot</span>
+                                <span>.NET Core</span>
                                 <span>MySQL</span>
-                                <span>Docker</span>
+                                <span>WebRTC</span>
+                                <span>SignalR</span>
+                                <span>API chatbotAI</span>
                             </div>
                             <div className="project-links">
-                                <a href="#" className="btn secondary">View Code</a>
-                                <a href="#" className="btn primary">Live Demo</a>
+                                <a href="https://github.com/dohung95/Online_Health_Consultation_Portal" className="btn secondary">View Code</a>
                             </div>
                         </div>
                     </RevealOnScroll>
@@ -52,19 +52,18 @@ const Projects = () => {
                     {/* Project 3 */}
                     <RevealOnScroll>
                         <div className="project-card">
-                            <h3>Weather Dashboard</h3>
+                            <h3>Digital Confession</h3>
                             <p>
-                                A real-time weather application using external APIs.
-                                Displays current conditions and 5-day forecast with dynamic background changes.
+                                An interactive 'Digital Love Letter' built to bridge the gap of shyness.
+                                Using vanilla HTML, CSS, and JavaScript, I created this dynamic experience to express feelings I couldn't say face-to-face—turning my first lines of code into a language of connection.
                             </p>
                             <div className="tech-stack">
                                 <span>JavaScript</span>
                                 <span>HTML/CSS</span>
-                                <span>OpenWeather API</span>
                             </div>
                             <div className="project-links">
-                                <a href="#" className="btn secondary">View Code</a>
-                                <a href="#" className="btn primary">Live Demo</a>
+                                <a href="https://github.com/Davidle96/flirting-with-crush" className="btn secondary">View Code</a>
+                                <a href="https://davidle96.github.io/flirting-with-crush/" className="btn primary">Live Demo</a>
                             </div>
                         </div>
                     </RevealOnScroll>
@@ -83,13 +82,33 @@ const Projects = () => {
                                 <span>CSS3</span>
                             </div>
                             <div className="project-links">
-                                <a href="#" className="btn secondary">View Code</a>
+                                <a href="https://github.com/Davidle96/Portfolio_v2" className="btn secondary">View Code</a>
                             </div>
                         </div>
                     </RevealOnScroll>
-                </div>
-            </div>
-        </section>
+
+                    {/* Project 5 */}
+                    <RevealOnScroll>
+                        <div className="project-card">
+                            <h3>BioLink Website</h3>
+                            <p>
+                                A centralized personal hub featuring a dynamic 'Matrix-style' background and interactive link cards.
+                                Built with React and Vite to aggregate social profiles and portfolio links in a sleek, dark-themed interface.
+                            </p>
+                            <div className="tech-stack">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>CSS3</span>
+                            </div>
+                            <div className="project-links">
+                                <a href="https://github.com/Davidle96/Bio_Link_v.2" className="btn secondary">View Code</a>
+                                <a href="https://bio-link-v-2.onrender.com/" className="btn primary">Live Demo</a>
+                            </div>
+                        </div>
+                    </RevealOnScroll>
+                </div >
+            </div >
+        </section >
     );
 };
 
