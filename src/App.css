@@ -1,0 +1,803 @@
+/* Basic Reset & Typography */
+:root {
+  --primary-color: #ef4444;
+  /* Red for contrast */
+  --secondary-color: #f87171;
+  /* Lighter red */
+  --text-color: #f3f4f6;
+  --bg-color: #0f0505;
+  /* Very dark red/black to match hero */
+  --section-bg: #1c0a0a;
+  /* Slightly lighter dark red/black */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 5, 5, 0.8);
+  /* Dark semi-transparent background */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+/* Add padding to main to prevent content from being hidden behind fixed header */
+/* Main content */
+/* Main content */
+main {
+  /* No padding-top so hero can be behind navbar */
+  padding-top: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Desktop Menu Spotlight Effect */
+@media (min-width: 769px) {
+  .nav-links a {
+    transition: color 0.3s, transform 0.3s, filter 0.3s, opacity 0.3s;
+  }
+
+  /* Dim all items when hovering the container */
+  .nav-links:hover a {
+    filter: blur(1px);
+    opacity: 0.6;
+  }
+
+  /* Highlight the specific hovered item */
+  .nav-links a:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+  }
+}
+
+/* Sections */
+.section {
+  padding: 5rem 0;
+}
+
+.section:nth-child(even) {
+  background-color: var(--section-bg);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Hero */
+.hero-section {
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Reduced opacity slightly */
+  z-index: 1;
+}
+
+/* Gradient Fade for smooth transition */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, var(--bg-color));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  /* Removed dark gradient for better contrast on dark bg */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h2 {
+  font-size: 2.2rem;
+  color: #e5e7eb;
+  /* Light gray */
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+  /* Slightly darker gray than h2 */
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn.secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn.secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.skill-category ul {
+  list-style: none;
+}
+
+.skill-category li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--section-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  border: 1px solid #374151;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.tech-stack {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-stack span {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Contact Form */
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-family: inherit;
+  transition: all 0.3s ease;
+  resize: none;
+  /* Disable resizing */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+/* Override browser autofill styles */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
+.form-group textarea:-webkit-autofill,
+.form-group textarea:-webkit-autofill:hover,
+.form-group textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-color);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(40, 40, 40, 0.95) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+
+/* Loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  /* Base state is hidden */
+}
+
+.reveal.visible.visible-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.reveal.visible.visible-down {
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Menu Styles */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 5, 5, 0.95);
+    /* Dark background matching theme */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .nav-links a {
+    color: var(--text-color);
+    /* Ensure text is visible */
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-container {
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Timeline / Experience Section */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Vertical line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Use transform for perfect centering */
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* Circles on the timeline */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg-color);
+  border: 4px solid var(--primary-color);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Left side items */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(odd)::after {
+  right: 0;
+  transform: translateX(50%);
+  /* Center relative to the right edge */
+}
+
+/* Right side items */
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: 0;
+  transform: translateX(-50%);
+  /* Center relative to the left edge */
+}
+
+/* Content box styling */
+.timeline-item h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item h4 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.timeline-item .date {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Highlight "Open to Work" */
+.timeline-item.highlight h3 {
+  color: #10b981;
+  /* Green for availability */
+}
+
+.timeline-item.highlight::after {
+  border-color: #10b981;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Reset odd/even specific styles for mobile */
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  /* Common circle positioning for mobile */
+  .timeline-item::after {
+    left: 31px;
+    /* Align with the line */
+    right: auto;
+    /* Reset right property */
+    transform: translateX(-50%);
+    /* Center it */
+  }
+
+  /* Ensure specific overrides don't conflict */
+  .timeline-item:nth-child(odd)::after {
+    left: 31px;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item:nth-child(even)::after {
+    left: 31px;
+    /* Explicitly override desktop 'left: 0' */
+    transform: translateX(-50%);
+  }
+}
+
+/* Timeline Animations - Split Effects */
+
+/* 1. Parent Container: Just becomes visible, no movement */
+.timeline-item.reveal.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  transform: none;
+  animation: none;
+}
+
+/* 2. Circle Animation: Zoom In */
+.timeline-item.reveal.visible::after {
+  animation: zoomIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  /* Bouncy effect */
+}
+
+/* 3. Content Animation: Slide from Center */
+/* Left side items (odd) - Slide in from Right */
+.timeline-item.reveal:nth-child(odd).visible .timeline-content {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+/* Right side items (even) - Slide in from Left */
+.timeline-item.reveal:nth-child(even).visible .timeline-content {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0) translateX(-50%);
+    /* Keep centering transform if needed, but wait */
+    /* The circle has absolute positioning. 
+       If we use transform scale, it might override other transforms.
+       The circle for even items has transform: translateX(-50%).
+       The circle for odd items has transform: translateX(50%) (mobile) or right:0.
+       
+       Let's be careful.
+       The scale transform must be combined with the existing translation.
+    */
+  }
+
+  to {
+    transform: scale(1) translateX(-50%);
+    /* This assumes standard centering */
+  }
+}
+
+/* We need separate keyframes for odd/even because of different base transforms? 
+   Let's check the base styles.
+   
+   .timeline::after (line) -> transform: translateX(-50%)
+   
+   .timeline-item::after (circle) -> 
+     Mobile: transform: translateX(-50%)
+     Desktop Even: transform: translateX(-50%)
+     Desktop Odd: transform: translateX(50%)
+     
+   So we need specific zoom keyframes.
+*/
+
+@keyframes zoomInCenter {
+  from {
+    transform: translateX(-50%) scale(0);
+  }
+
+  to {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes zoomInRight {
+  from {
+    transform: translateX(50%) scale(0);
+  }
+
+  to {
+    transform: translateX(50%) scale(1);
+  }
+}
+
+/* Apply specific zooms */
+.timeline-item.reveal.visible::after {
+  /* Default for mobile and even items */
+  animation: zoomInCenter 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@media (min-width: 769px) {
+  .timeline-item.reveal:nth-child(odd).visible::after {
+    animation: zoomInRight 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Timeline Spotlight Effect - Desktop Only */
+.timeline-item {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-content {
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 769px) {
+
+  /* When hovering the timeline container, dim ALL items */
+  .timeline:hover .timeline-item {
+    filter: blur(2px) brightness(0.6);
+    opacity: 0.7;
+  }
+
+  /* But keep the specific item being hovered fully visible and highlighted */
+  .timeline .timeline-item:hover {
+    filter: none;
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .timeline .timeline-item:hover .timeline-content {
+    transform: scale(1.03);
+  }
+
+  /* Add a glow to the title of the hovered item */
+  .timeline .timeline-item:hover h3 {
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+  }
+}
