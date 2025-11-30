@@ -28,7 +28,7 @@ const About = () => {
                         </span>
                     </div>
 
-                    <div style={{ fontSize: '1.1rem', minHeight: 'auto', marginBottom: '1rem' }}>
+                    <div style={{ fontSize: '1.1rem', minHeight: '30px', marginBottom: '1rem' }}>
                         <span style={{ color: 'var(--text-color)' }}>
                             <Typewriter
                                 words={[
