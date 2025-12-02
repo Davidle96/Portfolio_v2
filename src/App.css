@@ -258,9 +258,25 @@ h2 {
   gap: 2rem;
 }
 
+.skill-category {
+  background: rgba(28, 10, 10, 0.8);
+  /* Semi-transparent dark red/black */
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  /* Subtle red border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  /* Glassmorphism effect */
+}
+
 .skill-category h3 {
   margin-bottom: 1rem;
   color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .skill-category ul {
@@ -270,6 +286,138 @@ h2 {
 .skill-category li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #e5e7eb;
+}
+
+/* Desktop-only effects for Skills */
+@media (min-width: 769px) {
+
+  /* Focus Effect: Blur others when one is hovered */
+  .skills-grid:hover .skill-category:not(:hover) {
+    filter: blur(3px);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  /* Hover Effect: Scale up the hovered one */
+  .skill-category:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    transition: all 0.3s ease;
+    background: var(--section-bg);
+    /* Ensure background is solid for z-index */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Medieval Scroll Dropdown Effect */
+  .skill-category:hover ul {
+    animation: scrollDropdown 0.6s ease-out forwards;
+    transform-origin: top;
+  }
+
+  /* Scroll Animations for individual items */
+  .skills-animated.visible-up .skill-category li,
+  .skills-animated.visible-down .skill-category li {
+    opacity: 0;
+    /* Start hidden */
+  }
+
+  .skills-animated.visible-up .skill-category li,
+  .skills-animated.visible-down .skill-category li {
+    animation: slideInLeft 0.5s ease-out forwards;
+  }
+
+  /* Staggered delays */
+  .skill-category li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .skill-category li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .skill-category li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .skill-category li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .skill-category li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+
+  .skill-category li:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  .skill-category li:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+}
+
+@keyframes scrollDropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    clip-path: inset(0 0 100% 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollDropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    clip-path: inset(0 0 100% 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes slideInBottomLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slideInTopLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, -50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 /* Projects Grid */
@@ -596,6 +744,39 @@ h2 {
 .timeline-item:nth-child(even) {
   left: 50%;
   text-align: left;
+}
+
+.about-text-typewriter {
+  font-size: 1.1rem;
+  min-height: 60px;
+  margin-bottom: 1rem;
+}
+
+.about-hobbies-typewriter {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.about-intro {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .about-text-typewriter {
+    min-height: 120px;
+    /* Increased height for mobile text wrapping */
+  }
+
+  .about-hobbies-typewriter {
+    min-height: 60px;
+    /* Fixed height for hobbies on mobile */
+  }
+
+  .about-intro {
+    min-height: 170px;
+    /* Fixed height for intro paragraph on mobile */
+  }
 }
 
 .timeline-item:nth-child(even)::after {

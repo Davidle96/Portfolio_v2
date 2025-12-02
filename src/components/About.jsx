@@ -7,7 +7,7 @@ const About = () => {
             <div className="container">
                 <h2>About Me</h2>
                 <div className="about-content" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                    <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>
+                    <p className="about-intro">
                         Hello! I'm <strong>Le Quoc Dat</strong>, a passionate <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>
                             <Typewriter words={['Full Stack Developer', 'UI/UX Designer', 'Tech Enthusiast']} />
                         </span> based in Vietnam.
@@ -18,7 +18,7 @@ const About = () => {
                         I am a quick learner and always looking to expand my knowledge and skill set.
                         I thrive in collaborative environments and enjoy solving complex problems with clean, efficient code.
                     </p>
-                    <div style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>
+                    <div className="about-hobbies-typewriter">
                         Off the clock, I am a <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>
                             <Typewriter
                                 words={['Petrolhead & Supercar Lover', 'Embedded Systems Tinkerer', 'Tech Gadget Collector', 'Solo Traveler']}
@@ -28,7 +28,7 @@ const About = () => {
                         </span>
                     </div>
 
-                    <div style={{ fontSize: '1.1rem', minHeight: '30px', marginBottom: '1rem' }}>
+                    <div className="about-text-typewriter">
                         <span style={{ color: 'var(--text-color)' }}>
                             <Typewriter
                                 words={[
