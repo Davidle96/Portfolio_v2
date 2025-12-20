@@ -7,7 +7,7 @@ const Projects = () => {
             <div className="container">
                 <h2>Featured Projects</h2>
                 <div className="projects-grid">
-                    {/* Project 1 */}
+                    {/* Project 1 MoonBay Hotel Booking*/}
                     <RevealOnScroll>
                         <div className="project-card">
                             <h3>MoonBay Hotel Booking</h3>
@@ -27,7 +27,7 @@ const Projects = () => {
                         </div>
                     </RevealOnScroll>
 
-                    {/* Project 2 */}
+                    {/* Project 2 Online Health Consultation Portal*/}
                     <RevealOnScroll>
                         <div className="project-card">
                             <h3>Online Health Consultation Portal</h3>
@@ -49,7 +49,7 @@ const Projects = () => {
                         </div>
                     </RevealOnScroll>
 
-                    {/* Project 3 */}
+                    {/* Project 3 Digital Confession*/}
                     <RevealOnScroll>
                         <div className="project-card">
                             <h3>Digital Confession</h3>
@@ -68,7 +68,26 @@ const Projects = () => {
                         </div>
                     </RevealOnScroll>
 
-                    {/* Project 4 */}
+                    {/* Project 4 GAME*/}
+                    <RevealOnScroll>
+                        <div className="project-card">
+                            <h3>GAME</h3>
+                            <p>
+                                A web-based game built using React and TypeScript.
+                                The game features a responsive design and smooth animations, providing an engaging experience for users.
+                            </p>
+                            <div className="tech-stack">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                            </div>
+                            <div className="project-links">
+                                <a href="https://github.com/Davidle96/game.git" className="btn secondary">View Code</a>
+                                <a href="https://game-sjqp.onrender.com" className="btn primary">Live Demo</a>
+                            </div>
+                        </div>
+                    </RevealOnScroll>
+
+                    {/* Project 5 Portfolio Website*/}
                     <RevealOnScroll>
                         <div className="project-card">
                             <h3>Portfolio Website</h3>
@@ -87,7 +106,7 @@ const Projects = () => {
                         </div>
                     </RevealOnScroll>
 
-                    {/* Project 5 */}
+                    {/* Project 6 BioLink Website*/}
                     <RevealOnScroll>
                         <div className="project-card">
                             <h3>BioLink Website</h3>
