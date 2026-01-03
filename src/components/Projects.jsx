@@ -23,6 +23,7 @@ const Projects = () => {
                             </div>
                             <div className="project-links">
                                 <a href="https://github.com/dohung95/MoonBay" className="btn secondary">View Code</a>
+                                <a href="https://moonbay.onrender.com" className="btn primary">Live Demo</a>
                             </div>
                         </div>
                     </RevealOnScroll>
