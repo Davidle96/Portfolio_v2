@@ -11,7 +11,7 @@ const About = () => {
                         Hello! I'm <strong>Le Quoc Dat</strong>, a passionate <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>
                             <Typewriter words={['Full Stack Developer', 'UI/UX Designer', 'Tech Enthusiast']} />
                         </span> based in Vietnam.
-                        I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
+                        Having recently graduated from FPT Aptech's Fullstack program, I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
                     </p>
                     <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>
                         My goal is to always build products that provide pixel-perfect, performant experiences.

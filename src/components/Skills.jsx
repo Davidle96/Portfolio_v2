@@ -9,12 +9,13 @@ const Skills = () => {
                 <div className="skills-grid">
                     <RevealOnScroll className="skills-animated">
                         <div className="skill-category">
-                            <h3>Frontend & Design</h3>
+                            <h3>Frontend & Mobile</h3>
                             <ul>
                                 <li>React.js</li>
                                 <li>JavaScript (ES6+)</li>
                                 <li>HTML5 & CSS3</li>
                                 <li>Bootstrap / Tailwind</li>
+                                <li>Mobile Dev (Android / Flutter)</li>
                                 <li>UX/UI Design</li>
                             </ul>
                         </div>
@@ -27,9 +28,9 @@ const Skills = () => {
                                 <li>C# / .NET Core</li>
                                 <li>Python</li>
                                 <li>Node.js / Express</li>
-                                <li>PHP/ Laravel</li>
+                                <li>PHP / Laravel</li>
                                 <li>C / C++</li>
-                                <li>Java</li>
+                                <li>Java / Spring Boot</li>
                             </ul>
                         </div>
                     </RevealOnScroll>
@@ -51,7 +52,8 @@ const Skills = () => {
                             <ul>
                                 <li>Git / GitHub</li>
                                 <li>VS Code / Visual Studio</li>
-                                <li>Antigravity</li>
+                                <li>AI Tools (Copilot, ChatGPT, Antigravity, claude)</li>
+                                <li>Prompt Engineering</li>
                             </ul>
                         </div>
                     </RevealOnScroll>

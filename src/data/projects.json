@@ -1,0 +1,37 @@
+[
+    {
+        "title": "HealthLink",
+        "description": "A comprehensive omni-channel healthcare platform featuring a React web application, a Flutter mobile app, and a robust Spring Boot backend. Integrated an AI-powered image moderation service to ensure safe and compliant medical data management.",
+        "techStack": [
+            "React",
+            "Flutter",
+            "Spring Boot",
+            "AI Integration"
+        ],
+        "githubLink": "https://github.com/Davidle96/HealthLink",
+        "liveLink": ""
+    },
+    {
+        "title": "MoonBay Hotel Booking",
+        "description": "A comprehensive hotel management and booking platform built as a final group project. I was responsible for the core booking engine, authentication (Login/Register), and the administrative dashboard for hotel staff. Key features include online reservations and a detailed review system.",
+        "techStack": [
+            "React",
+            "Laravel",
+            "MySQL",
+            "Blade"
+        ],
+        "githubLink": "https://github.com/Davidle96/MoonBay",
+        "liveLink": "https://moonbay.onrender.com"
+    },
+    {
+        "title": "Pet Care",
+        "description": "An all-in-one pet care management platform designed to streamline veterinary appointments, track pet health records, and connect pet owners with care providers. Developed with a responsive React frontend and a robust Node.js and MongoDB backend to ensure a seamless user experience.",
+        "techStack": [
+            "React",
+            "Node.js",
+            "MongoDB"
+        ],
+        "githubLink": "https://github.com/Davidle96/PetCare",
+        "liveLink": ""
+    }
+]
